@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
   animateBounce('.atom-2', 0.4, 0.6, 0.8); // Atomo 2: Velocidad diferente, más pequeño
 });
 
-// Función para animar el Átomo (Rotación Interna)
+// Función para animar el Átomo
 function animateAtom() {
     // 1. Rotación continua de los electrones sobre sus órbitas (Animación interna)
     anime({
@@ -48,7 +48,7 @@ function animateAtom() {
 }
 
 
-/* LÓGICA DE REBOTE (SCREENSAVER) - NUEVA FUNCIÓN CLAVE */
+/* LÓGICA DE REBOTE (SCREENSAVER) */
 function animateBounce(selector, vx_initial, vy_initial, scale_val) {
     const element = document.querySelector(selector);
     const container = document.querySelector('.animation-box');
@@ -110,8 +110,10 @@ function animateBounce(selector, vx_initial, vy_initial, scale_val) {
   const canvas = document.getElementById('particles');
   if(!canvas) return;
   const ctx = canvas.getContext('2d');
-  let W, H, particles = [], maxP = 80;
-
+  
+  // CAMBIO 1: Aumentamos el número de partículas
+  let W, H, particles = [], maxP = 150; 
+  
   function resize(){
     W = canvas.width = innerWidth;
     H = canvas.height = innerHeight;
@@ -127,7 +129,10 @@ function animateBounce(selector, vx_initial, vy_initial, scale_val) {
     this.r = rand(0.8,2.8);
     this.vx = rand(-0.3,0.3);
     this.vy = rand(-0.2,0.6);
-    this.life = rand(60,400);
+    
+    // CAMBIO 2: Aumentamos el rango de vida (para que duren más)
+    this.life = rand(5000,10000); 
+    
     this.tick = 0;
     // color gradient neon
     const choice = Math.random();
@@ -145,7 +150,7 @@ function animateBounce(selector, vx_initial, vy_initial, scale_val) {
       this.x = rand(0,W);
       this.y = H + rand(10,80);
       this.tick = 0;
-      this.life = rand(60,400);
+      this.life = rand(5000,10000); // Resetear también con el nuevo rango
       this.vx = rand(-0.3,0.3);
       this.vy = rand(-0.2,0.6);
     }

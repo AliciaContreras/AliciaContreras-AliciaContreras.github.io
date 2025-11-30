@@ -420,3 +420,81 @@ section {
         0 0 25px rgba(255, 51, 153, 0.4);
     transform: translateY(-3px) scale(1.08);
 }
+
+/* ... (El CSS existente se mantiene) ... */
+
+/* --- OTROS PROYECTOS --- */
+.other-projects {
+    padding-top: 20px; /* Un poco menos de espacio que Proyectos Destacados */
+}
+
+.other-projects h2 {
+    /* Mantenemos el estilo h2 pero con color Magenta para diferenciar */
+    color: var(--neon-magenta); 
+}
+
+.other-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-top: 30px;
+}
+
+.mini-card {
+    background: var(--card); /* Fondo oscuro transparente */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.mini-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 209, 0.3);
+}
+
+.mini-card img {
+    width: 100%;
+    height: 100px; /* Altura fija para uniformidad */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.mini-card h3 {
+    font-size: 1rem;
+    color: var(--neon-cyan);
+    margin: 5px 0 5px 0;
+}
+
+.mini-card p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+    min-height: 4.2em; /* Altura mínima para que el diseño no se rompa con textos cortos */
+    line-height: 1.4;
+}
+
+/* Ajuste de botón pequeño para las mini-cards */
+.mini-card .btn-sm {
+    display: inline-block;
+    width: auto;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+}
+.mini-card .btn-sm:hover {
+    box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+/* MEDIA QUERY: En pantallas pequeñas (móviles), la rejilla debe ser de 1 columna */
+@media (max-width: 600px) {
+    .other-projects-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+    .mini-card p {
+        min-height: auto; /* Desactivar la altura mínima en móvil */
+    }
+}
