@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alicia Contreras — Portafolio</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- anime.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#">Alicia Contreras</a>
+      <ul class="menu">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 class="hero-title">Alicia Macarena Contreras Hormazábal</h1>
+        <p class="hero-sub">Full-Stack Python Developer • Profesora de Ciencias</p>
+        <p class="hero-desc">Fusiono la docencia y el desarrollo para crear herramientas educativas y aplicaciones web robustas.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#proyectos">Ver Proyectos</a>
+          <a class="btn" href="assets/Alicia_Contreras_CV.pdf" download>Descargar CV</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img class="avatar" src="assets/images/avatar.png" alt="Foto de Alicia">
+        <div class="glow"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SKILLS (animated chips) -->
+  <section class="skills" aria-label="Habilidades">
+    <div class="container">
+      <h2>Habilidades</h2>
+      <div class="chips" id="skill-chips">
+        <span class="chip">Python</span>
+        <span class="chip">Django</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">HTML &amp; CSS</span>
+        <span class="chip">Bootstrap</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="projects">
+    <div class="container">
+      <h2>Proyectos Destacados</h2>
+
+      <article class="project-card">
+        <img src="assets/images/django.png" alt="Instituto de Ciencia Cuestionable screenshot">
+        <div class="project-info">
+          <h3>Instituto de Ciencia Cuestionable</h3>
+          <p>Sistema de gestión full-stack (Django, PostgreSQL). Temática cyberpunk y panel de administración para inventarios y experimentos.</p>
+          <p class="techs">Python • Django • PostgreSQL • Bootstrap</p>
+          <div class="project-links">
+            <a class="btn-sm" href="https://doctoraalchemist.pythonanywhere.com/" target="_blank" rel="noopener">Ver App</a>
+            <a class="btn-sm" href="https://github.com/AliciaContreras/ICC" target="_blank" rel="noopener">Código</a>
+            <a class="btn-sm" href="https://www.loom.com/share/74916b1b5bf74a958c95a01837e53114" target="_blank" rel="noopener">Video</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="assets/images/bootstrap.png" alt="Portafolio Felino screenshot">
+        <div class="project-info">
+          <h3>Portafolio Científico Felino</h3>
+          <p>Portafolio estático responsivo con animaciones y manipulación del DOM.</p>
+          <p class="techs">HTML • CSS • JavaScript • Bootstrap</p>
+          <div class="project-links">
+            <a class="btn-sm" href="https://github.com/AliciaContreras/MIS_GATOS" target="_blank" rel="noopener">Código</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="assets/images/python.png" alt="Suite de Herramientas Científicas">
+        <div class="project-info">
+          <h3>Suite de Herramientas Científicas</h3>
+          <p>Scripts en Python para cálculos de física y química: masa molar, conversiones, cinemática.</p>
+          <p class="techs">Python</p>
+          <div class="project-links">
+            <a class="btn-sm" href="https://github.com/AliciaContreras/programas_Python_Basico" target="_blank" rel="noopener">Código</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA / TIMELINE -->
+  <section id="experiencia" class="timeline">
+    <div class="container">
+      <h2>Experiencia</h2>
+      <ol>
+        <li>
+          <strong>Desarrolladora Full-Stack</strong> — Proyectos personales con Django, despliegue en PythonAnywhere. <span class="muted">2023-2025</span>
+        </li>
+        <li>
+          <strong>Profesora de Ciencias</strong> — Diseño de material didáctico y laboratorios. <span class="muted">2016-2024</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="about">
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <p>Docente y desarrolladora que aplica la lógica científica al software. Me interesan los proyectos que conectan educación, datos y experiencia de usuario.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>¿Tienes una propuesta o colaboración? Escríbeme:</p>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:alicia.contreras.h@mail.pucv.cl">alicia.contreras.h@mail.pucv.cl</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/alicia-contreras-h" target="_blank" rel="noopener">linkedin.com/in/alicia-contreras-h</a></li>
+        <li>GitHub: <a href="https://github.com/AliciaContreras" target="_blank" rel="noopener">github.com/AliciaContreras</a></li>
+      </ul>
+
+      <!-- simple contact form (sends mailto) -->
+      <form class="contact-form" action="mailto:alicia.contreras.h@mail.pucv.cl" method="get" enctype="text/plain">
+        <input name="subject" placeholder="Asunto" required>
+        <textarea name="body" placeholder="Tu mensaje..." required></textarea>
+        <button class="btn btn-primary" type="submit">Enviar (email)</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Alicia Contreras. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

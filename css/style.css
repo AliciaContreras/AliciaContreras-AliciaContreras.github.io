@@ -1,0 +1,89 @@
+:root{
+  --bg:#071027;
+  --card:#0f1724;
+  --accent:#00ff9c;
+  --muted:#9aa4b2;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg, #071027 0%, #051021 100%);
+  color:#e8eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* NAV */
+.nav{
+  position:sticky; top:0; z-index:60;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.nav-inner{
+  max-width:1100px; margin:0 auto; padding:10px 18px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{color:var(--accent); font-weight:700; text-decoration:none; font-family:Orbitron, sans-serif}
+.menu{list-style:none; margin:0; padding:0; display:flex; gap:18px}
+.menu a{color:var(--muted); text-decoration:none; font-size:0.95rem}
+.menu a:hover{color:var(--accent)}
+
+/* HERO */
+.hero{padding:70px 18px 40px}
+.hero-grid{max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 320px; gap:30px; align-items:center}
+.hero-title{font-size:2.2rem; margin:0 0 8px; color: #dfffe9}
+.hero-sub{margin:0 0 16px; color:var(--accent); font-weight:600}
+.hero-desc{margin:0 0 18px; color:var(--muted)}
+.hero-cta{display:flex; gap:12px}
+.btn{display:inline-block; padding:9px 14px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--muted); text-decoration:none}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#5df5d0); color:#001520; font-weight:700; border:none}
+.btn-sm{display:inline-block; padding:7px 10px; border-radius:6px; text-decoration:none; background:rgba(255,255,255,0.03); color:var(--muted)}
+
+/* avatar + glow */
+.hero-media{position:relative; display:flex; align-items:center; justify-content:center}
+.avatar{width:220px; height:220px; border-radius:14px; object-fit:cover; border:3px solid rgba(255,255,255,0.03); box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.glow{position:absolute; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle at center, rgba(0,255,156,0.14), transparent 40%); filter:blur(18px); transform:translateY(20px); opacity:0.9}
+
+/* chips skills */
+.skills{padding:30px 18px}
+.container{max-width:1100px; margin:0 auto}
+.chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+.chip{padding:8px 12px; border-radius:999px; background:var(--glass); color:var(--muted); border:1px solid rgba(255,255,255,0.02)}
+
+/* projects */
+.projects{padding:30px 18px 10px}
+.project-card{display:flex; gap:18px; margin:18px 0; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:14px; border-radius:12px; align-items:center; transition:transform .25s ease, box-shadow .25s ease}
+.project-card img{width:180px; height:120px; object-fit:cover; border-radius:8px; border:1px solid rgba(255,255,255,0.03)}
+.project-card:hover{transform:translateY(-8px); box-shadow:0 20px 50px rgba(0,0,0,0.6)}
+.project-info h3{margin:0 0 6px}
+.project-info p{margin:0 0 8px; color:var(--muted)}
+.techs{font-size:0.85rem; color:var(--muted)}
+
+/* timeline */
+.timeline{padding:30px 18px; background:rgba(255,255,255,0.01)}
+.timeline ol{padding-left:18px; color:var(--muted)}
+.timeline li{margin:8px 0}
+
+/* about */
+.about{padding:30px 18px}
+
+/* contact */
+.contact{padding:30px 18px 60px}
+.contact-list{list-style:none; padding:0; color:var(--muted)}
+.contact-form{display:flex; flex-direction:column; gap:8px; margin-top:12px; max-width:480px}
+.contact-form input, .contact-form textarea{padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:transparent; color:inherit}
+.contact-form textarea{min-height:110px; resize:vertical}
+
+/* footer */
+.footer{padding:18px 8px; border-top:1px solid rgba(255,255,255,0.02); text-align:center; color:var(--muted)}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr; text-align:center}
+  .hero-media{order:-1}
+  .menu{display:none}
+}
